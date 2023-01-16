@@ -31,7 +31,7 @@ import androidx.compose.ui.window.application
 @Composable
 @Preview
 fun App() {
-    var textFieldState by remember { mutableStateOf("Hello, World!") }
+    var textFieldState by remember { mutableStateOf("") }
 
     MaterialTheme {
         Row {
@@ -61,7 +61,8 @@ fun App() {
                     Row(modifier = Modifier.fillMaxWidth()) {
                         if (textFieldState.isEmpty()) {
                             Text(
-                                text = "Search with user name.",
+                                text = "Enter text here",
+                                color = Color.LightGray,
                                 fontSize = 14.sp,
                                 modifier = Modifier.fillMaxWidth()
                                     .align(Alignment.CenterVertically),
